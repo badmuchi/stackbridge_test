@@ -136,24 +136,24 @@ Accept-Language: ru-RU
 ```mermaid
 graph TD
     %% Описание компонентов
-    subgraph Инициаторы событий (Микросервисы)
+    subgraph id1 ["Инициаторы событий (Микросервисы)"]
         CS[Cart Service]
         OS[Order Service]
         MS[Marketing Service]
     end
 
-    subgraph Шина данных и оркестрация
+    subgraph id2 ["Шина данных и оркестрация"]
         MB[Message Broker: Kafka / RabbitMQ]
         NS[Push Notification Service]
         DB[(Notification DB)]
     end
 
-    subgraph Внешние провайдеры доставки
+    subgraph id3 ["Внешние провайдеры доставки"]
         FCM[Firebase Cloud Messaging]
         APNS[Apple Push Notification service]
     end
 
-    subgraph Клиентская сторона
+    subgraph id4 ["Клиентская сторона"]
         App[Mobile Client: iOS / Android]
     end
 
